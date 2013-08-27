@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>豆瓣找房子</title>
+</head>
+
+<body>
+    <input id="q" type="text" value="望京" />
+    <input id="s" type="button" value="找房子" />
+</body>
+
+<script src="http://cdn.staticfile.org/jquery/2.0.3/jquery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $("#s").click(function() {
+    alert($("#q").val());
+    $.get("http://www.douban.com/group/search?group=35417&cat=1013&q=%E6%9C%9B%E4%BA%AC", function(data) {
+      alert("Data Loaded: " + data);
+    });
+  });
+});
+</script>
+</html>
